@@ -17,6 +17,34 @@ bower install react-input-creditcard --save
 
 Or [download as ZIP](https://github.com/mutebg/react-input-creditcard/archive/master.zip).
 
+## Usage
+
+1. Add React:
+
+    ```html
+    <script src="http://fb.me/react-0.12.2.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+    ```
+
+2. Add input-creditcard component:
+
+    ```html
+    <script type="text/jsx" src="path/to/input-creditcard/input-creditcard.js"></script>
+    ```
+3. Add path to CSS in your <head>
+
+    ```html
+    <link rel="stylesheet" href="path/to/input-creditcard/input-creditcard.css">
+    ```
+
+3. Start using it!
+
+    ```html
+    React.render(
+  		<InputCreditCard />,
+  		document.getElementById('input-creditcard')
+	);
+	```
 
 ## Options
 

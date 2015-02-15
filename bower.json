@@ -1,0 +1,19 @@
+{
+	"name": "react-input-creditcard",
+	"description": "React component CreditCard input with icon and number format",
+	"version": "0.0.1",
+	"keywords": [
+		"react-component",
+		"credit card",
+		"creditcard"
+	],
+	"authors": [
+		"Stoyan Delev <i@stoyandelev.com>"
+	],
+	"dependencies": {
+	},
+	"main": "input-creditcard/input-creditcard.js",
+	"ignore": [
+		"bower_components/"
+	]
+}

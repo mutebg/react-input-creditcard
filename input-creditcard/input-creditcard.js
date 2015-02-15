@@ -70,21 +70,26 @@ var InputCreditCard = React.createClass({
   },
   cardNumber: function(number) {
     var formatedNumber = number;
+    var currentCard = null;
     var currentCardType = '';
     var currentCardNumberLength = 16;
     
     if ( number ) {
-      currentCardType = this.cardFromNumber(number);
-      if ( currentCardType ) {
-        currentCardNumberLength = currentCardType.length
-        this.setState({type: currentCardType.type});
-        this.setState({numberLength: currentCardNumberLength});
+      currentCard = this.cardFromNumber(number);
+      
+      if ( currentCard ) {
+        currentCardType = currentCard.type;
+        currentCardNumberLength = currentCard.length 
       }
 
       formatedNumber = this.formatCardNumber(number, currentCardNumberLength);
     }
     
-    this.setState({number: formatedNumber});
+    this.setState({
+      type: currentCardType,
+      number: formatedNumber,
+      numberLength: currentCardNumberLength
+    });
   },
   handleChange: function(event) {
     this.cardNumber(event.target.value);
